@@ -50,3 +50,5 @@ schema:
   spotify_password: password?
   log_level: list(trace|debug|info|notice|warning|error|fatal)
 image: "ghcr.io/corneyl/{arch}-snapcast-server"
+volumes: 
+  - /addons_config/snapserver:/root/.config/snapserver:rw
