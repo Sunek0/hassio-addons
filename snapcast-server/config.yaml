@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Snapcast server
-version: "0.2.2"
+version: "0.2.3"
 slug: snapcast-server
 description: Snapcast server with Spotify connect support
 url: "https://github.com/corneyl/hassio-addons/tree/main/snapcast-server"
@@ -20,6 +20,9 @@ arch:
   - i386
 map:
   - share:rw
+  - type: addon_config
+    read_only: False
+    path: /root/.config/snapserver
 ports:
   1704/tcp: 1704
   1705/tcp: 1705
@@ -50,7 +53,4 @@ schema:
   spotify_password: password?
   log_level: list(trace|debug|info|notice|warning|error|fatal)
 image: "ghcr.io/corneyl/{arch}-snapcast-server"
-map:
-  - type: addon_config
-    read_only: False
-    path: /root/.config/snapserver
+
