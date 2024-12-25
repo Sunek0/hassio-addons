@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 name: Suneko's add-on repository
 url: "https://github.com/Sunek0/hassio-addons"
-maintainer: Corneyl
+maintainer: Suneko
